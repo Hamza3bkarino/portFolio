@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import { useState } from "react";
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaPaperPlane } from "react-icons/fa";
 
@@ -30,17 +31,34 @@ export default function ContactPage() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!validate()) return;
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    setLoading(true);
-    setTimeout(() => {
-      setSuccess(true);
-      setForm({ name: "", email: "", message: "" });
-      setLoading(false);
-    }, 1200);
-  };
+  if (!validate()) return;
+
+  setLoading(true);
+
+  try {
+    // Wait for the POST request to finish
+    await axios.post(
+      "https://hamzaerraji.app.n8n.cloud/webhook/portfolio-contact",
+      form,
+      {
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+
+    setSuccess(true);
+    setForm({ name: "", email: "", message: "" });
+
+  } catch (error) {
+    console.error("Failed to send message:", error);
+    toast.error("Failed to send message, try again");
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <section className="min-h-screen bg-gray-50 py-20 px-4">
