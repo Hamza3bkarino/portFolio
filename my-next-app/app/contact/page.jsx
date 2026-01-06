@@ -43,7 +43,7 @@ export default function ContactPage() {
   try {
     // Wait for the POST request to finish
     await axios.post(
-      "https://hamzaerraji.app.n8n.cloud/webhook/portfolio-contact",
+      process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL,
       form,
       {
         headers: { "Content-Type": "application/json" },
