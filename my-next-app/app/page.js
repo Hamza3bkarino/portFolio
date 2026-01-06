@@ -5,9 +5,12 @@ import { IoCodeSlash } from "react-icons/io5";
 import { LuPalette } from "react-icons/lu";
 import { LuZap } from "react-icons/lu";
 import { FaStar } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
 
 
 export default function Home() {
+    const router = useRouter();
+
 
   const stats = [
     {
@@ -105,11 +108,11 @@ export default function Home() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
-              <button className="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition flex items-center gap-2 text-sm font-medium">
+              <button className="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition flex items-center gap-2 text-sm font-medium" onClick={()=>router.push("/contact")}>
                 Start a project
                 <FaArrowRight className="w-4 h-4" />
               </button>
-              <button className="text-gray-700 px-6 py-3 rounded-full hover:bg-gray-100 transition text-sm font-medium">
+              <button className="text-gray-700 px-6 py-3 rounded-full hover:bg-gray-100 transition text-sm font-medium" onClick={()=>router.push("/services")}>
                 Discover my services
               </button>
             </div>
@@ -296,7 +299,7 @@ export default function Home() {
         </p>
 
         {/* CTA Button */}
-        <button className="bg-blue-500 text-white px-8 py-4 rounded-full hover:bg-blue-600 transition inline-flex items-center gap-2 text-base font-medium shadow-lg hover:shadow-xl">
+        <button className="bg-blue-500 text-white px-8 py-4 rounded-full hover:bg-blue-600 transition inline-flex items-center gap-2 text-base font-medium shadow-lg hover:shadow-xl" onClick={()=>router.push("/contact")}>
           Contact me now
           <FaArrowRight className="w-5 h-5 text-white"  />
         </button>

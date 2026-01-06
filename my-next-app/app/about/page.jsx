@@ -1,6 +1,10 @@
+'use client'
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function AboutPage() {
+  const router = useRouter();
+
   return (
     <section className="min-h-screen bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -57,6 +61,7 @@ export default function AboutPage() {
             <a
               href="/contact"
               className="bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition"
+              onClick={()=>router.push('/contact')}
             >
               Contact Me
             </a>
@@ -64,6 +69,7 @@ export default function AboutPage() {
             <a
               href="/projects"
               className="border-2 border-blue-500 text-blue-500 px-6 py-3 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition"
+              onClick={()=>router.push('/projects')}
             >
               View Projects
             </a>

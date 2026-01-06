@@ -43,7 +43,7 @@ export default function Navbar() {
           {/* CTA Button */}
           <div className="hidden sm:block">
             <a
-              href="/cv.pdf"
+              href="/Cv_web_full_Stack.pdf"
               className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition font-medium"
             >
               My CV

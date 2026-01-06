@@ -1,3 +1,5 @@
+'use client'
+import { useRouter } from "next/navigation";
 import {
   FaCode,
   FaPalette,
@@ -8,11 +10,12 @@ import {
   FaLayerGroup,
   FaShoppingCart,
   FaChartBar,
-  FaCheck
 } from "react-icons/fa";
 
 
 export default function ServicesPage() {
+
+  const router = useRouter();
   const services = [
   {
     icon: FaCode,
@@ -133,7 +136,7 @@ export default function ServicesPage() {
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm text-gray-700">
-                        <svg className="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                         {feature}
@@ -157,10 +160,10 @@ export default function ServicesPage() {
             Let's discuss your project and find the perfect solution for your needs.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <button className="bg-blue-500 text-white px-8 py-4 rounded-full hover:bg-blue-600 transition font-medium">
+            <button className="bg-blue-500 text-white px-8 py-4 rounded-full hover:bg-blue-600 transition font-medium" onClick={()=>router.push('/contact')}>
               Contact Us
             </button>
-            <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-gray-900 transition font-medium">
+            <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-gray-900 transition font-medium" onClick={()=>router.push('/')}>
               View Portfolio
             </button>
           </div>

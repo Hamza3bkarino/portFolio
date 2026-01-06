@@ -1,7 +1,9 @@
 "use client";
 import axios from "axios";
 import { useState } from "react";
-import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaPaperPlane } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaPaperPlane } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
+
 
 export default function ContactPage() {
   const [form, setForm] = useState({
@@ -47,9 +49,9 @@ export default function ContactPage() {
         headers: { "Content-Type": "application/json" },
       }
     );
+        setSuccess(true);
+        setForm({ name: "", email: "", message: "" });
 
-    setSuccess(true);
-    setForm({ name: "", email: "", message: "" });
 
   } catch (error) {
     console.error("Failed to send message:", error);
@@ -76,7 +78,7 @@ export default function ContactPage() {
 
           <ul className="space-y-3 text-gray-700">
             <li className="flex w-22.5 justify-between items-center"><FaMapMarkerAlt className="text-blue-600"/> Morocco</li>
-            <li className="flex w-[220px] justify-between items-center"><FaPaperPlane className="text-blue-600"/> errajihamza80@gmail.com</li>
+            <li className="flex w-55 justify-between items-center"><FaPaperPlane className="text-blue-600"/> errajihamza80@gmail.com</li>
             <li className="flex w-38 justify-between items-center"><FaPhoneAlt className="text-blue-600"/> +212 706 430 075</li>
           </ul>
         </div>
@@ -88,8 +90,9 @@ export default function ContactPage() {
           </h3>
 
           {success && (
-            <div className="mb-4 bg-green-100 text-green-700 text-sm p-3 rounded-lg">
-              Message sent successfully ✅
+            <div className="mb-4 bg-green-100 text-green-700 text-sm p-3 rounded-lg flex justify-between items-center ">
+              <p>Message sent successfully ✅</p> 
+              <IoClose className=""/>
             </div>
           )}
 
