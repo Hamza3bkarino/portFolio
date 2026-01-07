@@ -15,9 +15,9 @@ export default function Navbar() {
               <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
                 <IoCodeSlash />
               </div>
-              <span className="text-xl font-semibold text-gray-900">
+              <p className="text-xl font-semibold text-gray-900">
                 Port<span className="font-normal text-blue-500">folio</span>
-              </span>
+              </p>
             </div>
           </div>
 

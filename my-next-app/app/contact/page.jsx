@@ -43,7 +43,7 @@ export default function ContactPage() {
   try {
     // Wait for the POST request to finish
     await axios.post(
-      process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL,
+      'https://hamzaerraji.app.n8n.cloud/webhook/portfolio-contact',
       form,
       {
         headers: { "Content-Type": "application/json" },
@@ -55,7 +55,6 @@ export default function ContactPage() {
 
   } catch (error) {
     console.error("Failed to send message:", error);
-    toast.error("Failed to send message, try again");
   } finally {
     setLoading(false);
   }
