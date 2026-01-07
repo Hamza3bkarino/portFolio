@@ -79,19 +79,19 @@ export default function Navbar() {
         {isOpen && (
           <div className="sm:hidden pb-4">
             <div className="flex flex-col space-y-3">
-              <a href="#home" className="text-blue-500 font-medium hover:text-blue-600 transition">
+              <a href="/" className="text-blue-500 font-medium hover:text-blue-600 transition">
                 Home
               </a>
-              <a href="#services" className="text-gray-600 hover:text-gray-900 transition">
+              <a href="/services" className="text-gray-600 hover:text-gray-900 transition">
                 Services
               </a>
-              <a href="#projects" className="text-gray-600 hover:text-gray-900 transition">
+              <a href="/projects" className="text-gray-600 hover:text-gray-900 transition">
                 Projects
               </a>
-              <a href="#apropos" className="text-gray-600 hover:text-gray-900 transition">
+              <a href="/apropos" className="text-gray-600 hover:text-gray-900 transition">
                 À propos
               </a>
-              <a href="#contact" className="text-gray-600 hover:text-gray-900 transition">
+              <a href="/contact" className="text-gray-600 hover:text-gray-900 transition">
                 Contact
               </a>
               <a
