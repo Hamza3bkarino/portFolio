@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${dmSans.className} antialiased`}
+        className={`${dmSans.variable} antialiased`}
       >
         <Navbar/>
         {children}

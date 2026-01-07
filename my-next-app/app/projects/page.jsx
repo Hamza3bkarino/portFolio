@@ -60,17 +60,24 @@ export default function ProjectsPage() {
 
   const projects = [
     {
+      title: "Healthy Food WebSite ",
+      description: "Full website about Healthy food with menu , gallery and contact",
+      tech: ["Html", "Css", "JavaScript"],
+      github: "https://github.com/Hamza3bkarino/FreshBite",
+      live: "https://freshbite-ten.vercel.app/",
+    },
+    {
       title: "Event Ticket Platform",
       description: "Full event system with cart, checkout, admin dashboard and email automation.",
-      tech: ["React", "Redux", "n8n"],
-      github: "#",
-      live: "#",
+      tech: ["React js", "Redux", "n8n"],
+      github: "https://github.com/Hamza3bkarino/EventSphere",
+      live: "https://event-sphere-jet.vercel.app",
     },
     {
       title: "E-commerce Website",
-      description: "Modern e-commerce platform with authentication and order management.",
+      description: "Modern e-commerce platform ,sales Tech products with add to cart , checkout , commands.",
       tech: ["Next.js", "Node.js", "MongoDB"],
-      github: "#",
+      github: "https://github.com/Hamza3bkarino/-ShopTech",
       live: "#",
     },
     {
