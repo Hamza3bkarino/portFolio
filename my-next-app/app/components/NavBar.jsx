@@ -88,7 +88,7 @@ export default function Navbar() {
               <a href="/projects" className="text-gray-600 hover:text-gray-900 transition">
                 Projects
               </a>
-              <a href="/apropos" className="text-gray-600 hover:text-gray-900 transition">
+              <a href="/about" className="text-gray-600 hover:text-gray-900 transition">
                 À propos
               </a>
               <a href="/contact" className="text-gray-600 hover:text-gray-900 transition">
