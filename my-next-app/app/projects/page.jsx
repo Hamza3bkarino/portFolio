@@ -76,9 +76,9 @@ export default function ProjectsPage() {
     {
       title: "E-commerce Website",
       description: "Modern e-commerce platform ,sales Tech products with add to cart , checkout , commands.",
-      tech: ["Next.js", "Node.js", "MongoDB"],
+      tech: ["React.js", "Css.js", "Vite"],
       github: "https://github.com/Hamza3bkarino/-ShopTech",
-      live: "#",
+      live: "https://shoptechhamza.vercel.app/",
     },
     {
       title: "Portfolio Website",
@@ -173,12 +173,14 @@ export default function ProjectsPage() {
               <div className="flex gap-4">
                 <a
                   href={project.github}
+                  target="_blank"
                   className="flex items-center gap-2 text-sm text-gray-700 hover:text-black transition"
                 >
                   <FaGithub /> Code
                 </a>
                 <a
                   href={project.live}
+                  target="_blank"
                   className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-800 transition"
                 >
                   <FiExternalLink /> Live
